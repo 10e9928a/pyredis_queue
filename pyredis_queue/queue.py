@@ -10,8 +10,8 @@ from __future__ import annotations
 import time
 import logging
 from redis import Redis
-from redis_task_queue.connection import RedisConnection
-from redis_task_queue.task import Task, TaskStatus
+from pyredis_queue.connection import RedisConnection
+from pyredis_queue.task import Task, TaskStatus
 
 
 

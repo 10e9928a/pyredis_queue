@@ -15,9 +15,9 @@ from datetime import datetime, timedelta
 from dataclasses import dataclass, field
 from typing import Callable
 
-from redis_task_queue.connection import RedisConnection
-from redis_task_queue.task import Task, TaskPriority
-from redis_task_queue.queue import TaskQueue
+from pyredis_queue.connection import RedisConnection
+from pyredis_queue.task import Task, TaskPriority
+from pyredis_queue.queue import TaskQueue
 
 
 
@@ -293,7 +293,7 @@ class TaskScheduler:
         """
         def decorator(func: Callable[..., object]) -> Callable[..., object]:
             # 注册任务处理器
-            from redis_task_queue.task import TaskRegistry
+            from pyredis_queue.task import TaskRegistry
             _ = TaskRegistry.register(task_name)(func)
 
             # 创建定时任务

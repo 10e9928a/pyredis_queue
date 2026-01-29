@@ -15,9 +15,9 @@ from concurrent.futures import ThreadPoolExecutor, Future
 from types import FrameType
 from typing import Callable
 
-from redis_task_queue.connection import RedisConnection
-from redis_task_queue.task import Task, TaskRegistry
-from redis_task_queue.queue import TaskQueue
+from pyredis_queue.connection import RedisConnection
+from pyredis_queue.task import Task, TaskRegistry
+from pyredis_queue.queue import TaskQueue
 
 logger = logging.getLogger(__name__)
 
